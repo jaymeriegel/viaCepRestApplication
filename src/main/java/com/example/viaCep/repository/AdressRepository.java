@@ -13,6 +13,6 @@ import com.example.viaCep.model.AdressEntity;
  */
 public interface AdressRepository extends CrudRepository<AdressEntity, Long> {
 	
-	AdressEntity findByCep(String cep);
+	AdressEntity findByZip(String zip);
 
 }

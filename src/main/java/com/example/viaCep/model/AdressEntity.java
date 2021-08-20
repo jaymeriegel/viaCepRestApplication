@@ -18,7 +18,8 @@ public class AdressEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long zip;
+	private Long id;
+	private String zip;
 	private String publicPlace;
 	private String complements;
 	private String district;
@@ -43,7 +44,7 @@ public class AdressEntity {
 	 * @param ddd
 	 * @param siafi
 	 */
-	public AdressEntity(Long zip, String publicPlace, String complements, String district, String city, String uf,
+	public AdressEntity(String zip, String publicPlace, String complements, String district, String city, String uf,
 			String ibge, String gia, Integer ddd, String siafi) {
 		super();
 		this.zip = zip;
@@ -61,7 +62,7 @@ public class AdressEntity {
 	/**
 	 * @return the zip
 	 */
-	public Long getZip() {
+	public String getZip() {
 		return zip;
 	}
 	
