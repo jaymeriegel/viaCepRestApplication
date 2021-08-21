@@ -4,14 +4,13 @@
 package com.example.viaCep.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.viaCep.model.AdressEntity;
-import com.example.viaCep.repository.AdressRepository;
+import com.example.viaCep.model.AddressEntity;
+import com.example.viaCep.repository.AddressRepository;
 
 /**
  * @author Jayme
@@ -20,13 +19,13 @@ import com.example.viaCep.repository.AdressRepository;
 
 @RestController
 @RequestMapping(value = "/api/adresses/zip")
-public class AdressRestController {
+public class AddressRestController {
 	
 	@Autowired
-	AdressRepository repository;
+	AddressRepository repository;
 	
 	@GetMapping(value = "/{zip}", produces = "application/json;charset=UTF-8")
-	public AdressEntity getAdress(@PathVariable String zip) {
+	public AddressEntity getAdress(@PathVariable String zip) {
 		
 		return repository.findByZip(zip);
 		

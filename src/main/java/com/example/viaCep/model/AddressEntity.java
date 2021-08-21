@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @JsonIgnoreProperties
-public class AdressEntity {
+public class AddressEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -33,7 +33,7 @@ public class AdressEntity {
 	private Integer ddd;
 	private String siafi;
 	
-	public AdressEntity() {}
+	public AddressEntity() {}
 	
 	/**
 	 * @param zip
@@ -47,7 +47,7 @@ public class AdressEntity {
 	 * @param ddd
 	 * @param siafi
 	 */
-	public AdressEntity(String zip, String publicPlace, String complements, String district, String city, String uf,
+	public AddressEntity(String zip, String publicPlace, String complements, String district, String city, String uf,
 			String ibge, String gia, Integer ddd, String siafi) {
 		super();
 		this.zip = zip;
@@ -62,7 +62,7 @@ public class AdressEntity {
 		this.siafi = siafi;
 	}
 	
-	public AdressEntity(String zip, String publicPlace) {
+	public AddressEntity(String zip, String publicPlace) {
 		super();
 		this.zip = zip;
 		this.publicPlace = publicPlace;

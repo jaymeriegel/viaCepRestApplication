@@ -5,8 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.example.viaCep.model.AdressEntity;
-import com.example.viaCep.repository.AdressRepository;
+import com.example.viaCep.model.AddressEntity;
+import com.example.viaCep.repository.AddressRepository;
 
 @SpringBootApplication
 public class ViaCepApplicationDuo2Application {
@@ -16,9 +16,9 @@ public class ViaCepApplicationDuo2Application {
 	}
 
 	@Bean
-	public CommandLineRunner demo(AdressRepository repository) {
+	public CommandLineRunner demo(AddressRepository repository) {
 		return (args) -> {
-			repository.save(new AdressEntity("123", "teste", "teste1", "teste2", "teste3", "teste4", "teste5", "teste6", 123, "teste8"));
+			repository.save(new AddressEntity("123", "teste", "teste1", "teste2", "teste3", "teste4", "teste5", "teste6", 123, "teste8"));
 		};
 	}
 
