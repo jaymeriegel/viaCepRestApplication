@@ -8,12 +8,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author Jayme
  *
  */
 
 @Entity
+@JsonIgnoreProperties
 public class AdressEntity {
 	
 	@Id
@@ -57,6 +60,12 @@ public class AdressEntity {
 		this.gia = gia;
 		this.ddd = ddd;
 		this.siafi = siafi;
+	}
+	
+	public AdressEntity(String zip, String publicPlace) {
+		super();
+		this.zip = zip;
+		this.publicPlace = publicPlace;
 	}
 
 	/**
