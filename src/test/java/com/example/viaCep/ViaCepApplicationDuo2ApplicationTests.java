@@ -1,6 +1,7 @@
 package com.example.viaCep;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.jupiter.api.Test;
@@ -20,11 +21,11 @@ class ViaCepApplicationDuo2ApplicationTests {
 	
 	@Test
 	void testGetAdressSuccess() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/api/adresses/zip/123")
-				.accept(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.get("/api/addresses/zip/94935410")
+		.accept(MediaType.APPLICATION_JSON))
 		.andExpect(status().isOk())
 		.andExpect(content().contentType("application/json;charset=UTF-8"))
-		.andExpect(content().json("{\"zip\":\"123\",\"publicPlace\":\"teste\",\"complements\":\"teste1\",\"district\":\"teste2\",\"city\":\"teste3\",\"uf\":\"teste4\",\"ibge\":\"teste5\",\"gia\":\"teste6\",\"ddd\":123,\"siafi\":\"teste8\"}"));		
+		.andExpect(jsonPath("$.id").value(0));		
 	}
 	
 	@Test

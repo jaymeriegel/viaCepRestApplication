@@ -18,7 +18,7 @@ import com.example.viaCep.repository.AddressRepository;
  */
 
 @RestController
-@RequestMapping(value = "/api/adresses/zip")
+@RequestMapping(value = "/api/addresses/zip")
 public class AddressRestController {
 	
 	@Autowired

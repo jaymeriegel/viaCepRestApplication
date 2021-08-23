@@ -252,6 +252,15 @@ public class AddressEntity {
 	public void setSiafi(String siafi) {
 		this.siafi = siafi;
 	}
+
+	@Override
+	public String toString() {
+		return String.format(
+				"AddressEntity [id=%s, zip=%s, publicPlace=%s, complements=%s, district=%s, city=%s, uf=%s, ibge=%s, gia=%s, ddd=%s, siafi=%s]",
+				id, zip, publicPlace, complements, district, city, uf, ibge, gia, ddd, siafi);
+	}
+	
+	
 	
 	
 	
